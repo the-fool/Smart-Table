@@ -27,7 +27,7 @@ gulp.task('lint', function () {
 gulp.task('karma-CI', function (done) {
     var conf = require('./test/karma.common.js');
     conf.singleRun = true;
-    conf.browsers = ['PhantomJS'];
+    conf.browsers = ['Chrome'];
     conf.basePath = './';
     karma.start(conf, done);
 });
