@@ -14,6 +14,7 @@ ng.module('smart-table')
       selectedClass: 'st-selected'
     },
     sort: {
+      pristineClass: 'st-sort-pristine',
       ascentClass: 'st-sort-ascent',
       descentClass: 'st-sort-descent',
       descendingFirst: false,

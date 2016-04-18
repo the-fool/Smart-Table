@@ -10,6 +10,7 @@ ng.module('smart-table')
         var index = 0;
         var classAscent = attr.stClassAscent || stConfig.sort.ascentClass;
         var classDescent = attr.stClassDescent || stConfig.sort.descentClass;
+	var classPristine = attr.stClassPristine || stConfig.sort.pristineClass;
         var stateClasses = [classAscent, classDescent];
         var sortDefault;
         var skipNatural = attr.stSkipNatural !== undefined ? attr.stSkipNatural : stConfig.sort.skipNatural;
@@ -69,7 +70,8 @@ ng.module('smart-table')
             index = 0;
             element
               .removeClass(classAscent)
-              .removeClass(classDescent);
+              .removeClass(classDescent)
+	      .addClass(classPristine);
           } else {
             index = newValue.reverse === true ? 2 : 1;
             element
